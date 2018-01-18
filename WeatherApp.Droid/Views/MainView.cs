@@ -1,5 +1,6 @@
 using Android.App;
 using Android.OS;
+using Android.Widget;
 using MvvmCross.Droid.Views;
 namespace WeatherApp.Droid.Views
 {
@@ -9,10 +10,14 @@ namespace WeatherApp.Droid.Views
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            SetContentView(Resource.Layout.MainView);
+            SetContentView(Resource.Layout.MainView);           
 
-           
-            
+            TextView text = FindViewById<TextView>(Resource.Id.weatherText);
+
+            text.Text = ViewModel.Text;
+
+
         }
+
     }
 }

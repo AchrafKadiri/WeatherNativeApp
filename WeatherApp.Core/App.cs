@@ -16,10 +16,10 @@ namespace WeatherApp.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            //CreatableTypes()
-            //    .EndingWith("Client")
-            //    .AsInterfaces()
-            //    .RegisterAsLazySingleton();
+            CreatableTypes()
+                .EndingWith("Driver")
+                .AsInterfaces()
+                .RegisterAsLazySingleton();
 
 
             // register the appstart object
